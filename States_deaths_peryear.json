@@ -7,18 +7,15 @@
   "data": {"url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/data/Annualfatalityrate_AUS.csv"},
   "mark": {
     "type": "line",
-    "point": {
-      "filled": false,
-      "fill": "white"
-    }
+    "point":{}
   },
   "encoding": {
     "x": {"timeUnit": "year", "field": "Years", "title":"Years"},
-    "y": {"field": "Fatality_Rate", "type": "quantitative","title":"Fatality rate per 100,000"},
+    "y": {"field": "Deaths", "type": "quantitative","title":"Deaths"},
     "color": {"field": "States", "type": "nominal"},
     "tooltip": [
         {"field": "States", "type": "nominal"},
-        {"field": "Fatality_Rate", "type": "quantitative", "title" : "Fatality rate"}
+        {"field": "Deaths", "type": "quantitative", "title" : "Deaths"}
         ]
   }
 }
