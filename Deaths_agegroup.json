@@ -1,0 +1,17 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 400,
+    "title" : "Australian deaths per age group",
+    "data": {"url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/data/Deaths_by_agegroup.csv"},
+    "mark": "area",
+    "encoding": {
+      "x": {"field": "Years", "type": "ordinal", "axis": {"domain": false}},
+      "y": {"aggregate": "sum", "field": "Deaths", "axis": null, "stack": "normalize"},
+      "color": {"field": "Age_group","scale": {"scheme": "turbo"}},
+      "tooltip":
+         [{"field": "Age_group", "title": "Age:"},
+          {"field": "Years", "type": "ordinal", "title": "Year:"},
+          {"field": "Deaths", "type": "quantitative", "title": "Deaths:"}]
+      }
+  }
