@@ -1,37 +1,43 @@
 {
-    "width": 800,
-    "height": 400,
-    "padding": 2.5,
-    "data":
-      {
-      "name": "tree",
-      "url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/data/deaths_by_roaduser.csv",
-      "format": {"type": "csv"}
-      },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height" : 400,
+  "data": {"url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/data/deaths_by_roaduser.csv",
+    "format": {"type": "csv"}},
     "transform": [
-          {"type": "stratify", "key": "id", "parentKey": "parent"},
-          {
-            "type": "treemap",
-            "field": "size",
-            "sort": {"field": "value"},
-            "round": true,
-            "method": {"signal": "layout"},
-            "ratio": {"signal": "aspectRatio"},
-            "size": [{"signal": "width"}, {"signal": "height"}]
-            
-          },
-          { "filter": "datum.Years==Year"}
-        ],
-    "params": [{
-      "name": "Year",
-      "value": 2022,
-      "bind": {"name": "Select the year:", "input": "range", "min": 2013,"max": 2022,"step": 1}
-        }
+        { "filter": "datum.Years==Year"}
       ],
-    "mark": "rect",
-    "encoding": {
-      "x": {"field": "Deaths", "type": "quantitative"},
-      "y": {"field": "Road_user", "type": "nominal"},
-      "color": {"field": "Deaths", "type": "quantitative", "scale": {"scheme": "purplered"}}
+  "params": [{
+    "name": "Year",
+    "value": 2022,
+    "bind": {"name": "Select the year:", "input": "range", "min": 2013,"max": 2022,"step": 1}
+      }
+    ],
+  "encoding": {
+    "y": {
+      "field": "Road_user",
+      "type": "nominal",
+      "sort": "ascending",
+      "axis": null
     }
-  }
+  },
+  "layer": [{
+    "mark": {"type": "bar", "font" : "Calibri Body"},
+    "encoding": {
+      "x": {
+        "aggregate": "mean",
+        "field": "Deaths",
+        "scale": {"domain": [0, 700]},
+        "sort": "ascending",
+        "title": "Deaths"
+      },
+      "color": {"field": "Deaths", "type": "quantitative", "scale" :{"scheme": "purplered"}}
+    }
+  }, {
+    "mark": {"type": "text", "align": "left", "x": 10,"fontWeight": "bold", "fontSize" : 15, "font" : "Calibri Body"},
+    "encoding": {
+      "text": {"field": "Road_user"},
+      "detail": {"aggregate": "count"}
+    }
+  }]
+}
