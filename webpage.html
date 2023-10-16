@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vega-Lite Graphs</title>
+
+    <!-- Include Vega-Lite and Vega libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.3"></script>
+
+    <!-- Include Vega-Lite CSS (for styling) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/vega-embed@6.18.3/build/vega-embed.css">
+</head>
+<body>
+    <h1>Vega-Lite Graphs</h1>
+
+    <!-- Containers for the Vega-Lite graphs -->
+    <div id="vega-lite-plot1"></div>
+    <div id="vega-lite-plot2"></div>
+
+    <script>
+        // Function to load and render Vega-Lite JSON specifications
+        function renderVegaLite(specContainerId, specUrl) {
+            fetch(specUrl)
+                .then(response => response.json())
+                .then(spec => {
+                    vegaEmbed(`#${specContainerId}`, spec);
+                })
+                .catch(error => console.error('Error loading Vega-Lite spec:', error));
+        }
+
+        // Load and render the Vega-Lite JSON specifications from separate files
+        renderVegaLite('vega-lite-plot1', 'WorldMap_TrafficAccidents.json');
+        renderVegaLite('vega-lite-plot2', 'Male_Female_Deaths.json');
+    </script>
+</body>
+</html>
