@@ -2,7 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": { "url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/data/DeathsbyGender.csv" },
   "config": {
-    "background": "transparent"
+    "background": "transparent",
+    "font" : "Inter"
   },
   "hconcat": [
     {
@@ -11,10 +12,12 @@
       "height":280,
       "mark": {"type": "bar", "orient": "horizontal"},
       "encoding": {
+        
         "y": { "field": "Years", "type": "ordinal", "axis": { "orient": "right" , "title": null, "labels": false}, "title": null},
         "x": { "field": "Deaths_f", "type": "quantitative", "scale": {"domain"  : [0, 1000],"reverse": true },"title": "Deaths"},
         "color": { "field": "Female", "scale": {"scheme": "purplegreen"}},
         "tooltip": [
+          {"field": "Years", "type": "ordinal", "title" : "Year"},
         {"field": "Female", "type": "nominal", "title": "Sex"},
         {"field": "Deaths_f", "type": "quantitative", "title" : "Deaths"}
         ]
@@ -30,6 +33,7 @@
         "x": { "field": "Deaths_m", "type": "quantitative", "title": "Deaths", "scale" : {"domain"  : [0, 1000]}},
         "color": {"field": "Male", "scale": {"scheme": "purplegreen"},"title":null},
         "tooltip": [
+        {"field": "Years", "type": "ordinal", "title" : "Year"},
         {"field": "Male", "type": "nominal", "title": "Sex"},
         {"field": "Deaths_m", "type": "quantitative", "title" : "Deaths"}
         ]

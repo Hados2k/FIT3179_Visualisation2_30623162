@@ -8,9 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="style.css">
-  
 </head>
-
 <body>
 <div class = "custom-background">
   <div class="page">
@@ -20,12 +18,12 @@
 
     <!-- container start -->
     <div class = "container2"> 
-        <h2>TRAFFIC ACCIDENTS ACROSS THE GLOBE</h2>
+        <h2>TRAFFIC DEATHS ACROSS THE GLOBE</h2>
     <div class = "map-container"><div id="vis1"></div></div>
     <div class = "textHeading"><p>Key notes</p></div>
     <div class = "dualColumn">
         <div class = "column">
-                <p>This is the content for column 1.</p>
+                <p>When looking on the world scale, Australia given it's size has quite a low death toll per year due to traffic incidents</p>
             </div>
         <div class = "column">
                 <p>This is the content for column 2.</p>
@@ -36,15 +34,15 @@
 
     <!-- container start -->
     <div class="container2">
-        <h2>JURISTICTION AND ASSOCIATED TRAFFIC DEATHS</h2>
+        <h2>AUSTRALIAN JURISTICTION AND ASSOCIATED TRAFFIC DEATHS</h2>
       <div class = "dualColumn">
         <div class = "dualchart-container1" id = "vis2"></div>
         <div class = "dualchart-container1" id = "vis6"></div>
+            <p class = "column">Shown, across the years <b>NSW</b> has consistently had the greatest <br>amount of <b>Traffic related deaths</b>. This can be <b>directly related<br>
+              to population size</b> as they are the <b>most populated state</b>.<br>The <b>overall trend</b> of the visualisation follows suit <br>with the <b>population density</b> of each state.</p>
           <div class = "column">
-            <p>This is the content for column 1.</p>
-          </div>
-          <div class = "column">
-            <p>This is the content for column 1.</p>
+            <p>The trend from this visualisation is clear as the <b>more<br> densely populated areas</b> such as <b>Major Cities</b> and <b>Inner Regional</b><br> 
+              areas have a <b>greater contribution to the death toll</b><br> when related to <b>traffic incidents</b>.</p>
           </div>
       </div>
     </div>
@@ -52,41 +50,43 @@
 
     <!-- container start -->
     <div class="container2">
-      <h2>AGE GROUP AND TYPE OF ROAD USER</h2>
+      <h2>AUSTRALIAN AGE GROUP AND TYPE OF ROAD USER</h2>
     <div class = "dualColumn">
       <div class = "dualchart-container2" id = "vis3"></div>
       <div class = "dualchart-container2" id = "vis4"></div>
-        <div class = "column">
-          <p class = "column">As shown, the <b>greatest proportion of deaths per age group</b><br>is associated with <b>40-64 year olds</b><br> which can be explained as it contains the <br><b>greatest proportion of the population (24 Years)</b>.<br>
-            Conversely, the <b>smallest proportion of deaths</b> is associated with<br><b>0-7 year olds</b> which can be explained by the fact<br>that they <b>cannot drive</b>and therefore would be a<br>result of being <b>in the vehicle during an accident</b>.</p>
-        </div>
-        <div class = "column">
-          <p>Naturally, <b>Drivers</b> have the <b>greatest proportion of deaths</b> in terms<br>of Road user as there is much higher count of<br>drivers than any of the other categories, Motor cyclists are<br>the <b>second highest</b> category which goes to<br>show how dangerous motor cycling can be, even<br>greater than a passenger in most years</p>
-        </div>
+          <span>As shown, the <b>greatest proportion of deaths per age group</b><br>is associated with <b>40-64 year olds</b><br> which can be explained as it 
+            contains the <br><b>greatest proportion of the population (24 Years)</b>.<br>
+            Conversely, the <b>smallest proportion of deaths</b> is associated with<br><b>0-7 year olds</b> which can be explained by the fact<br>that 
+            they <b>cannot drive</b> and therefore would be a<br>result of being <b>in the vehicle during an accident</b>.</span>
+          <span><br>Naturally, <b>Drivers</b> have the <b>greatest proportion of deaths</b> in terms<br>of Road user as there is much higher count of<br>
+            drivers than any of the other categories, Motor cyclists are<br>the <b>second highest</b> category which goes to<br>show how dangerous motor cycling can be, 
+            even<br>greater than a passenger in most years</span>
     </div>
   </div>
     <!-- container end -->
 
     <!-- container start -->
     <div class="container3">
-        <h2>MALE AND FEMALE - TRAFFIC DEATHS COMPARISON
+        <h2>AUSTRALIAN MALE AND FEMALES - TRAFFIC DEATHS COMPARISON
           <p class = "subHeading">Key factors explaining why Males have a greater proportion of Traffic related deaths</p>
         </h2>
         <div class = "triColumn">
         <div class = "column">
-            <p>
+            <span>
               <p class = "dotPointL">Vehicle Choices</p>
               <p class = "leftColumn"><b>Males</b> are more likely to drive <b>larger and more powerful vehicles</b> which can be directly associated with a <b>higher crash risk</b><br><br></p>
               <p class = "dotPointL">Alcohol and Substance use</p>
               <p class = "leftColumn">Males are more likely to drive under the influence of alcohol or other substances which significantly increases the risk of accidents occuring</p>
-            </p>
+            </span>
           </div>
         <div class = "column" id = "vis5"></div>
         <div class = "column">
+          <span>
               <p class = "dotPointR">Risk-Taking Behaviour</p>
               <p class = "rightColumn">Studies show that Males on average tend to engage in riskier driving behaviours. This includes behaviours such as speeding, not using seat belts and aggressive driving</p>
               <p class = "dotPointR">Occupation</p>
               <p class = "rightColumn">Certain industries like construction and transportation have a higher proportion of male workers which are then more likely to be involved in a work related incident</p>
+          </span>
         </div>
       </div>
     </div>
