@@ -3,7 +3,8 @@
   "height": 250,
   "width": 300,
   "config": {
-    "background": "transparent"
+    "background": "transparent",
+    "font" : "Inter"
   },
   "data": {"url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/data/DeathsbyArea.csv",
   "format": {"type": "csv"}

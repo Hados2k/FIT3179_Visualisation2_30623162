@@ -1,9 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 400,
-  "height" : 400,
+  "width": 450,
+  "height" : 250,
   "config": {
     "background": "transparent",
+    "font" : "Inter",
     "axis": {
       "grid": false}
   },
@@ -27,7 +28,7 @@
     }
   },
   "layer": [{
-    "mark": {"type": "bar", "font" : "Calibri Body"},
+    "mark": {"type": "bar", "font" : "Inter"},
     "encoding": {
       "x": {
         "aggregate": "mean",
@@ -41,7 +42,7 @@
       ]
     }
   }, {
-    "mark": {"type": "text", "align": "left", "x": 10,"fontWeight": "bold", "fontSize" : 15, "font" : "Calibri Body"},
+    "mark": {"type": "text", "align": "left", "x": 10, "fontSize" : 15, "font" : "Inter"},
     "encoding": {
       "text": {"field": "Road_user"},
       "detail": {"aggregate": "count"}

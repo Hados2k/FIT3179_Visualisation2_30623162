@@ -3,7 +3,8 @@
   "width": 500,
   "height": 250,
   "config": {
-    "background": "transparent"
+    "background": "transparent",
+    "font" : "Inter"
   },
   "data": {"url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/data/Annualfatalityrate_AUS.csv"},
   "mark": {

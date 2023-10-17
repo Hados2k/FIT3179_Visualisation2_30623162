@@ -1,11 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 500,
-    "height": 400,
+    "width": 550,
+    "height": 250,
     "config": {
-      "background": "transparent"
+      "background": "transparent",
+      "font" : "Inter"
     },
-    "title" : "Australian deaths per age group",
     "data": {"url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/data/Deaths_by_agegroup.csv"},
     "mark": "area",
     "encoding": {

@@ -9,7 +9,8 @@
       }
     ],
   "config": {
-    "background": "transparent"
+    "background": "transparent",
+    "font" : "Inter"
   },
   "projection": {"type": "equalEarth"},
   "layer": [

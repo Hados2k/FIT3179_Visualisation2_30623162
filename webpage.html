@@ -1,111 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Multiple Visualisations | An Example</title>
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <title>Data Visualisation 2 - Hayden Smith 30623162</title>
+  <!-- Import Vega & Vega-Lite -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-
-  <!-- Import pure.css -->
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
-    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Google font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-
   <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
-  <style>
-    /* Add CSS styles to control the container's appearance */
-    .custom-background {
-        background-image: url('images/traffic_image.jpg');
-        background-size: cover; /* Adjust to your preferred size */
-        background-repeat: no-repeat;
-      }
-    .container1 {
-        height: 80px;
-        width: 70%;
-        margin: 0 auto; /* Center the container horizontally */
-        margin-bottom: 1%;
-        padding: 10px; /* Add padding for spacing */
-        background-color: #f0f0f0; /* Background color */
-        border: 10px solid #ccc; /* Border for the container */
-    }
-    .container2 {
-        width: 1200px; /* Set the desired width */
-        height: 600px;
-        margin: auto; /* Center the container horizontally */
-        margin-bottom: 0.5%;
-        background-color: #f0f0f0; /* Background color */
-        border: 10px solid #ccc; /* Border for the container */
-    }
-    .container3 {
-        width: 1200px; /* Set the desired width */
-        height: 450px;
-        margin: auto; /* Center the container horizontally */
-        margin-bottom: 0.5%;
-        background-color: #f0f0f0; /* Background color */
-        border: 10px solid #ccc; /* Border for the container */
-    }
-    .map-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 300px; /* Set the desired height for your container */
-        width: 100%; /* Set the desired width */
-    }
-    h1 {
-        color: white;
-        font-family: 'Bahnschrift Semicondensed', sans-serif;
-        text-align: center;
-        font-size: 60px; /* Set the font size to 24 pixels (adjust as needed) */
-        font-weight: bold; /* Make the font bold */
-    }
-    h2 {
-        font-family: 'Bahnschrift Semicondensed', sans-serif;
-        text-align: center;
-        font-size: 40px; /* Set the font size to 24 pixels (adjust as needed) */
-        font-weight: bold; /* Make the font bold */
-    }
-    .textHeading {
-        font-family: 'Bahnschrift Semicondensed', sans-serif;
-        text-align: center;
-        font-size: 20px; /* Set the font size to 24 pixels (adjust as needed) */
-        font-weight: bold; /* Make the font bold */
-    }
-    .dualColumn {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-        gap: 20px; /* Adjust the gap between columns */
-        text-align: center;
-      }
-      .triColumn {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr; /* Two equal-width columns */
-        gap: 20px; /* Adjust the gap between columns */
-        text-align: center;
-      }
-</style>
-
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
 </head>
 
 <body>
 <div class = "custom-background">
   <div class="page">
-    <!-- pure grid group -->
-    <div><h1>TRAFFIC ACCIDENTS IN AUSTRALIA</h1></div>
-        
-    
-    <!-- end pure grid group -->
+    <!-- container start -->
+    <div><h1>TRAFFIC RELATED DEATHS IN AUSTRALIA</h1></div>
+    <!-- container end -->
 
-    <!-- pure grid group -->
+    <!-- container start -->
     <div class = "container2"> 
-        <h2>Traffic accidents across the world</h2>
+        <h2>TRAFFIC ACCIDENTS ACROSS THE GLOBE</h2>
     <div class = "map-container"><div id="vis1"></div></div>
     <div class = "textHeading"><p>Key notes</p></div>
     <div class = "dualColumn">
@@ -117,59 +32,77 @@
             </div>
         </div>
     </div>
-    <!-- end pure grid group -->
+    <!-- container end -->
 
-    <!-- pure grid group -->
+    <!-- container start -->
     <div class="container2">
-        <h2>Juristiction and associated traffic deaths</h2>
+        <h2>JURISTICTION AND ASSOCIATED TRAFFIC DEATHS</h2>
+      <div class = "dualColumn">
+        <div class = "dualchart-container1" id = "vis2"></div>
+        <div class = "dualchart-container1" id = "vis6"></div>
+          <div class = "column">
+            <p>This is the content for column 1.</p>
+          </div>
+          <div class = "column">
+            <p>This is the content for column 1.</p>
+          </div>
+      </div>
+    </div>
+    <!-- container end -->
+
+    <!-- container start -->
+    <div class="container2">
+      <h2>AGE GROUP AND TYPE OF ROAD USER</h2>
     <div class = "dualColumn">
-        <div class = "column" id = "vis2">
-                <p>This is the content for column 1.</p>
-            </div>
-        <div class = "column" id = "vis6">
-                <p>This is the content for column 2.</p>
-            </div>
+      <div class = "dualchart-container2" id = "vis3"></div>
+      <div class = "dualchart-container2" id = "vis4"></div>
+        <div class = "column">
+          <p class = "column">As shown, the <b>greatest proportion of deaths per age group</b><br>is associated with <b>40-64 year olds</b><br> which can be explained as it contains the <br><b>greatest proportion of the population (24 Years)</b>.<br>
+            Conversely, the <b>smallest proportion of deaths</b> is associated with<br><b>0-7 year olds</b> which can be explained by the fact<br>that they <b>cannot drive</b> and unforunately would be as a<br>result of being <b>in the vehicle during an accident</b>.</p>
+        </div>
+        <div class = "column">
+          <p>Naturally, <b>Drivers</b> have the <b>greatest proportion of deaths</b> in terms<br>of Road user as there is much higher count of<br>drivers than any of the other categories, Motor cyclists are<br>the <b>second highest</b> category which goes to<br>show how dangerous motor cycling can be, even<br>greater than a passenger in most years</p>
         </div>
     </div>
-    <!-- end pure grid group -->
+  </div>
+    <!-- container end -->
 
-    <!-- pure grid group -->
-    <div class="container2">
-        <h2>Juristiction and associated traffic deaths</h2>
-    <div class = "dualColumn">
-        <div class = "column" id = "vis3">
-                <p>This is the content for column 1.</p>
-            </div>
-        <div class = "column" id = "vis4">
-                <p>This is the content for column 2.</p>
-            </div>
-        </div>
-    </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
+    <!-- container start -->
     <div class="container3">
-        <h2>Male to Female comparison</h2>
+        <h2>MALE AND FEMALE - TRAFFIC DEATHS COMPARISON
+          <p class = "subHeading">Key factors explaining why Males have a greater proportion of Traffic related deaths</p>
+        </h2>
         <div class = "triColumn">
         <div class = "column">
-            <p>This is the content for column 1.</p></div>
+            <p>
+              <p class = "dotPointL">Vehicle Choices</p>
+              <p class = "leftColumn"><b>Males</b> are more likely to drive <b>larger and more powerful vehicles</b> which can be directly associated with a <b>higher crash risk</b><br><br></p>
+              <p class = "dotPointL">Alcohol and Substance use</p>
+              <p class = "leftColumn">Males are more likely to drive under the influence of alcohol or other substances which significantly increases the risk of accidents occuring</p>
+            </p>
+          </div>
         <div class = "column" id = "vis5"></div>
         <div class = "column">
-            <p>This is the content for column 2.</p></div>
+              <p class = "dotPointR">Risk-Taking Behaviour</p>
+              <p class = "rightColumn">Studies show that Males on average tend to engage in riskier driving behaviours. This includes behaviours such as speeding, not using seat belts and aggressive driving</p>
+              <p class = "dotPointR">Occupation</p>
+              <p class = "rightColumn">Certain industries like construction and transportation have a higher proportion of male workers which are then more likely to be involved in a work related incident</p>
         </div>
+      </div>
     </div>
-    <!-- end pure grid group -->
+    <!-- container end -->
     
     </div>
-  </div> <!-- end page -->
+  </div> 
+  <!-- end page -->
 
   <script type="text/javascript">
-    var specVis1 = ".charts/WorldMap_TrafficAccidents.json";
-    var specVis2 = ".charts/States_deaths_peryear.json";
-    var specVis3 = ".charts/Deaths_agegroup.json";
-    var specVis4 = ".charts/Deaths_roaduser.json";
-    var specVis5 = ".charts/Male_Female_Deaths.json";
-    var specVis6 = ".charts/Deaths_area.json";
+    var specVis1 = "charts/WorldMap_TrafficAccidents.json";
+    var specVis2 = "charts/States_deaths_peryear.json";
+    var specVis3 = "charts/Deaths_agegroup.json";
+    var specVis4 = "charts/Deaths_roaduser.json";
+    var specVis5 = "charts/Male_Female_Deaths.json";
+    var specVis6 = "charts/Deaths_area.json";
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
 

@@ -7,8 +7,8 @@
   "hconcat": [
     {
       "spacing" : 2,
-      "width": 250,
-      "height": 150,
+      "width": 185,
+      "height":280,
       "mark": {"type": "bar", "orient": "horizontal"},
       "encoding": {
         "y": { "field": "Years", "type": "ordinal", "axis": { "orient": "right" , "title": null, "labels": false}, "title": null},
@@ -22,8 +22,8 @@
     },
     {
       "spacing" : 2,
-      "width": 250,
-      "height": 150,
+      "width": 180,
+      "height": 280,
       "mark": {"type": "bar", "orient": "horizontal"},
       "encoding": {
         "y": { "field": "Years", "type": "ordinal","axis": {"title": null} },
