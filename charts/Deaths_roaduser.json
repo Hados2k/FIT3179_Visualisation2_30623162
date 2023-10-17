@@ -3,7 +3,9 @@
   "width": 400,
   "height" : 400,
   "config": {
-    "background": "transparent"
+    "background": "transparent",
+    "axis": {
+      "grid": false}
   },
   "data": {"url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/data/deaths_by_roaduser.csv",
     "format": {"type": "csv"}},
@@ -34,7 +36,9 @@
         "sort": "ascending",
         "title": "Deaths"
       },
-      "color": {"field": "Deaths", "type": "quantitative", "scale" :{"scheme": "purplered"}}
+      "color": {"field": "Deaths", "type": "quantitative", "scale" :{"scheme": "yelloworangered"}},"tooltip":[
+        {"field":"Deaths", "title": "Deaths: "}
+      ]
     }
   }, {
     "mark": {"type": "text", "align": "left", "x": 10,"fontWeight": "bold", "fontSize" : 15, "font" : "Calibri Body"},

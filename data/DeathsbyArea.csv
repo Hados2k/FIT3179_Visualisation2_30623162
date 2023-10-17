@@ -1,59 +1,31 @@
 ﻿Years,Deaths,Area
-2013,420,"Major 
-Cities"
-2014,377,"Major 
-Cities"
-2015,413,"Major 
-Cities"
-2016,458,"Major 
-Cities"
-2017,431,"Major 
-Cities"
-2018,394,"Major 
-Cities"
-2019,407,"Major 
-Cities"
-2020,378,"Major 
-Cities"
-2021,378,"Major 
-Cities"
-2013,399,"Inner 
-Regional "
-2014,392,"Inner 
-Regional "
-2015,388,"Inner 
-Regional "
-2016,427,"Inner 
-Regional "
-2017,413,"Inner 
-Regional "
-2018,345,"Inner 
-Regional "
-2019,377,"Inner 
-Regional "
-2020,357,"Inner 
-Regional "
-2021,353,"Inner 
-Regional "
-2013,236,"Outer 
-Regional "
-2014,242,"Outer 
-Regional "
-2015,283,"Outer 
-Regional "
-2016,290,"Outer 
-Regional "
-2017,290,"Outer 
-Regional "
-2018,276,"Outer 
-Regional "
-2019,279,"Outer 
-Regional "
-2020,252,"Outer 
-Regional "
-2021,264,"Outer 
-Regional "
-2013,70,Remote 
+2013,420,"Major Cities"
+2014,377,"Major Cities"
+2015,413,"Major Cities"
+2016,458,"Major Cities"
+2017,431,"Major Cities"
+2018,394,"Major Cities"
+2019,407,"Major Cities"
+2020,378,"Major Cities"
+2021,378,"Major Cities"
+2013,399,"Inner Regional"
+2014,392,"Inner Regional"
+2015,388,"Inner Regional"
+2016,427,"Inner Regional"
+2017,413,"Inner Regional"
+2018,345,"Inner Regional"
+2019,377,"Inner Regional"
+2020,357,"Inner Regional"
+2021,353,"Inner Regional"
+2013,236,"Outer Regional"
+2014,242,"Outer Regional"
+2015,283,"Outer Regiona"
+2016,290,"Outer Regional"
+2017,290,"Outer Regional"
+2018,276,"Outer Regional"
+2019,279,"Outer Regional"
+2020,252,"Outer Regional"
+2021,264,"Outer Regional"
 2014,60,Remote 
 2015,61,Remote 
 2016,49,Remote 
@@ -62,21 +34,12 @@ Regional "
 2019,62,Remote 
 2020,46,Remote 
 2021,56,Remote 
-2013,56,"Very 
-Remote "
-2014,67,"Very 
-Remote "
-2015,58,"Very 
-Remote "
-2016,69,"Very 
-Remote "
-2017,37,"Very 
-Remote "
-2018,57,"Very 
-Remote "
-2019,60,"Very 
-Remote "
-2020,61,"Very 
-Remote "
-2021,52,"Very 
-Remote "
+2013,56,"Very Remote"
+2014,67,"Very Remote"
+2015,58,"Very Remote"
+2016,69,"Very Remote"
+2017,37,"Very Remote"
+2018,57,"Very Remote"
+2019,60,"Very Remote"
+2020,61,"Very Remote"
+2021,52,"Very Remote"

@@ -28,6 +28,7 @@
         background-repeat: no-repeat;
       }
     .container1 {
+        height: 80px;
         width: 70%;
         margin: 0 auto; /* Center the container horizontally */
         margin-bottom: 1%;
@@ -43,6 +44,14 @@
         background-color: #f0f0f0; /* Background color */
         border: 10px solid #ccc; /* Border for the container */
     }
+    .container3 {
+        width: 1200px; /* Set the desired width */
+        height: 450px;
+        margin: auto; /* Center the container horizontally */
+        margin-bottom: 0.5%;
+        background-color: #f0f0f0; /* Background color */
+        border: 10px solid #ccc; /* Border for the container */
+    }
     .map-container {
         display: flex;
         align-items: center;
@@ -51,6 +60,7 @@
         width: 100%; /* Set the desired width */
     }
     h1 {
+        color: white;
         font-family: 'Bahnschrift Semicondensed', sans-serif;
         text-align: center;
         font-size: 60px; /* Set the font size to 24 pixels (adjust as needed) */
@@ -74,6 +84,12 @@
         gap: 20px; /* Adjust the gap between columns */
         text-align: center;
       }
+      .triColumn {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Two equal-width columns */
+        gap: 20px; /* Adjust the gap between columns */
+        text-align: center;
+      }
 </style>
 
 </head>
@@ -82,10 +98,9 @@
 <div class = "custom-background">
   <div class="page">
     <!-- pure grid group -->
-      <div class="container1">
-        <h1>TRAFFIC ACCIDENTS IN AUSTRALIA</h1>
-        <p></p>
-    </div>
+    <div><h1>TRAFFIC ACCIDENTS IN AUSTRALIA</h1></div>
+        
+    
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
@@ -106,8 +121,7 @@
 
     <!-- pure grid group -->
     <div class="container2">
-        <h2>2 Columns</h2>
-        <div class = "textHeading"><p>Key notes</p></div>
+        <h2>Juristiction and associated traffic deaths</h2>
     <div class = "dualColumn">
         <div class = "column" id = "vis2">
                 <p>This is the content for column 1.</p>
@@ -121,35 +135,41 @@
 
     <!-- pure grid group -->
     <div class="container2">
-        <div id="vis4">
-        <h2>3 columns</h2>
-            <p>The first and second columns are combined. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-                faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
-        </div>
-        <div id="vis5">
-            <p>The first and second columns are combined. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-                faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
-        </div>
-        <div id="vis6">
-            <p>The first and second columns are combined. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-                faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+        <h2>Juristiction and associated traffic deaths</h2>
+    <div class = "dualColumn">
+        <div class = "column" id = "vis3">
+                <p>This is the content for column 1.</p>
+            </div>
+        <div class = "column" id = "vis4">
+                <p>This is the content for column 2.</p>
+            </div>
         </div>
     </div>
     <!-- end pure grid group -->
 
+    <!-- pure grid group -->
+    <div class="container3">
+        <h2>Male to Female comparison</h2>
+        <div class = "triColumn">
+        <div class = "column">
+            <p>This is the content for column 1.</p></div>
+        <div class = "column" id = "vis5"></div>
+        <div class = "column">
+            <p>This is the content for column 2.</p></div>
+        </div>
+    </div>
+    <!-- end pure grid group -->
+    
     </div>
   </div> <!-- end page -->
 
   <script type="text/javascript">
-    var specVis1 = "./WorldMap_TrafficAccidents.json";
-    var specVis2 = "./States_deaths_peryear.json";
-    var specVis3 = "./Deaths_agegroup.json";
-    var specVis4 = "./Deaths_roaduser.json";
-    var specVis5 = "./Male_Female_Deaths.json";
-    var specVis6 = "./Deaths_area.json";
+    var specVis1 = ".charts/WorldMap_TrafficAccidents.json";
+    var specVis2 = ".charts/States_deaths_peryear.json";
+    var specVis3 = ".charts/Deaths_agegroup.json";
+    var specVis4 = ".charts/Deaths_roaduser.json";
+    var specVis5 = ".charts/Male_Female_Deaths.json";
+    var specVis6 = ".charts/Deaths_area.json";
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
 

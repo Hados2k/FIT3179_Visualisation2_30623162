@@ -1,9 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title":"Australian Annual fatality rate by jurisdiction ",
-  "width": 400,
-  "height": 400,
-  "description": "Stock prices of 5 Tech Companies over Time.",
+  "width": 500,
+  "height": 250,
   "config": {
     "background": "transparent"
   },
@@ -15,7 +13,7 @@
   "encoding": {
     "x": {"timeUnit": "year", "field": "Years", "title":"Years"},
     "y": {"field": "Deaths", "type": "quantitative","title":"Deaths"},
-    "color": {"field": "States", "type": "nominal"},
+    "color": {"field": "States", "type": "nominal", "scale": {"scheme": "tableau10"}},
     "tooltip": [
         {"field": "States", "type": "nominal"},
         {"field": "Deaths", "type": "quantitative", "title" : "Deaths"}
