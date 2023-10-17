@@ -38,6 +38,14 @@ body {
     background-color: #f0f0f0; /* Background color */
     border: 10px solid #ccc; /* Border for the container */
   }
+  .container5 {
+    width: 1200px; /* Set the desired width */
+    height: 460px;
+    margin: auto; /* Center the container horizontally */
+    margin-bottom: 0.5%;
+    background-color: #f0f0f0; /* Background color */
+    border: 10px solid #ccc; /* Border for the container */
+  }
   .map-container {
     display: flex;
     align-items: center;
