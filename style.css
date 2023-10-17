@@ -16,7 +16,7 @@ body {
   }
   .container2 {
     width: 1200px; /* Set the desired width */
-    height: 600px;
+    height: 650px;
     margin: auto; /* Center the container horizontally */
     margin-bottom: 0.5%;
     background-color: #f0f0f0; /* Background color */
@@ -24,7 +24,15 @@ body {
   }
   .container3 {
     width: 1200px; /* Set the desired width */
-    height: 510px;
+    height: 560px;
+    margin: auto; /* Center the container horizontally */
+    margin-bottom: 0.5%;
+    background-color: #f0f0f0; /* Background color */
+    border: 10px solid #ccc; /* Border for the container */
+  }
+  .container4 {
+    width: 1200px; /* Set the desired width */
+    height: 600px;
     margin: auto; /* Center the container horizontally */
     margin-bottom: 0.5%;
     background-color: #f0f0f0; /* Background color */
@@ -55,7 +63,7 @@ body {
       color: white;
       font-family: 'Bahnschrift Semicondensed', sans-serif;
       text-align: center;
-      font-size: 60px; /* Set the font size to 24 pixels (adjust as needed) */
+      font-size: 70px; /* Set the font size to 24 pixels (adjust as needed) */
       font-weight: bold; /* Make the font bold */
   }
   h2 {
@@ -68,6 +76,7 @@ body {
       text-align: center;
       font-size: 20px; /* Set the font size to 24 pixels (adjust as needed) */
       font-weight: bold; /* Make the font bold */
+      font-family: 'Bahnschrift Semicondensed', sans-serif;
   }
   .dualColumn {
       display: grid;
