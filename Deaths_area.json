@@ -1,6 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A simple radial chart with embedded data.",
+    "config": {
+      "background": "transparent"
+    },
     "data": {"url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/data/DeathsbyArea.csv",
     "format": {"type": "csv"}
     },

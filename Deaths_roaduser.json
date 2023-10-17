@@ -2,6 +2,9 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 400,
   "height" : 400,
+  "config": {
+    "background": "transparent"
+  },
   "data": {"url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/data/deaths_by_roaduser.csv",
     "format": {"type": "csv"}},
     "transform": [

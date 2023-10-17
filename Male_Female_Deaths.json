@@ -2,6 +2,9 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title" : "Australian vehicle deaths comparing Male and Female",
   "data": { "url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/data/DeathsbyGender.csv" },
+  "config": {
+    "background": "transparent"
+  },
   "hconcat": [
     {
       "spacing" : 2,

@@ -22,8 +22,13 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
   <style>
     /* Add CSS styles to control the container's appearance */
+    .custom-background {
+        background-image: url('images/traffic_image.jpg');
+        background-size: cover; /* Adjust to your preferred size */
+        background-repeat: no-repeat;
+      }
     .container1 {
-        width: 70%; /* Set the desired width */
+        width: 70%;
         margin: 0 auto; /* Center the container horizontally */
         margin-bottom: 1%;
         padding: 10px; /* Add padding for spacing */
@@ -31,10 +36,10 @@
         border: 10px solid #ccc; /* Border for the container */
     }
     .container2 {
-        width: 80%; /* Set the desired width */
-        margin: 0 auto; /* Center the container horizontally */
+        width: 1200px; /* Set the desired width */
+        height: 600px;
+        margin: auto; /* Center the container horizontally */
         margin-bottom: 0.5%;
-        padding: 20px; /* Add padding for spacing */
         background-color: #f0f0f0; /* Background color */
         border: 10px solid #ccc; /* Border for the container */
     }
@@ -42,9 +47,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 600px; /* Set the desired height for your container */
+        height: 300px; /* Set the desired height for your container */
         width: 100%; /* Set the desired width */
-        margin: 0 auto; /* Center the container horizontally */
     }
     h1 {
         font-family: 'Bahnschrift Semicondensed', sans-serif;
@@ -58,6 +62,12 @@
         font-size: 40px; /* Set the font size to 24 pixels (adjust as needed) */
         font-weight: bold; /* Make the font bold */
     }
+    .textHeading {
+        font-family: 'Bahnschrift Semicondensed', sans-serif;
+        text-align: center;
+        font-size: 20px; /* Set the font size to 24 pixels (adjust as needed) */
+        font-weight: bold; /* Make the font bold */
+    }
     .dualColumn {
         display: grid;
         grid-template-columns: 1fr 1fr; /* Two equal-width columns */
@@ -69,7 +79,7 @@
 </head>
 
 <body>
-
+<div class = "custom-background">
   <div class="page">
     <!-- pure grid group -->
       <div class="container1">
@@ -82,13 +92,12 @@
     <div class = "container2"> 
         <h2>Traffic accidents across the world</h2>
     <div class = "map-container"><div id="vis1"></div></div>
+    <div class = "textHeading"><p>Key notes</p></div>
     <div class = "dualColumn">
         <div class = "column">
-                <h2>Column 1</h2>
                 <p>This is the content for column 1.</p>
             </div>
-            <div class = "column">
-                <h2>Column 2</h2>
+        <div class = "column">
                 <p>This is the content for column 2.</p>
             </div>
         </div>
@@ -98,16 +107,15 @@
     <!-- pure grid group -->
     <div class="container2">
         <h2>2 Columns</h2>
-        <div id = "vis2">
-          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
-            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
-      </div>
-      <div id = "vis3">
-        <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
-          sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
-    </div>
+        <div class = "textHeading"><p>Key notes</p></div>
+    <div class = "dualColumn">
+        <div class = "column" id = "vis2">
+                <p>This is the content for column 1.</p>
+            </div>
+        <div class = "column" id = "vis6">
+                <p>This is the content for column 2.</p>
+            </div>
+        </div>
     </div>
     <!-- end pure grid group -->
 
@@ -132,7 +140,7 @@
     </div>
     <!-- end pure grid group -->
 
-
+    </div>
   </div> <!-- end page -->
 
   <script type="text/javascript">
