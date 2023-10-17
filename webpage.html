@@ -42,8 +42,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 400px; /* Set the desired height for your container */
-        width: 80%; /* Set the desired width */
+        height: 600px; /* Set the desired height for your container */
+        width: 100%; /* Set the desired width */
         margin: 0 auto; /* Center the container horizontally */
     }
     h1 {
@@ -58,12 +58,12 @@
         font-size: 40px; /* Set the font size to 24 pixels (adjust as needed) */
         font-weight: bold; /* Make the font bold */
     }
-    .map-text-left {
-        display: inline-block;
-        text-align: left;
-        width: 100px; /* Set the desired height for your container */
-    }
-
+    .dualColumn {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+        gap: 20px; /* Adjust the gap between columns */
+        text-align: center;
+      }
 </style>
 
 </head>
@@ -81,12 +81,16 @@
     <!-- pure grid group -->
     <div class = "container2"> 
         <h2>Traffic accidents across the world</h2>
-    <div class = "map-container">
-        <div><p class = "map-text-left">Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore</p></div>
-        <div  id="vis1"></div><p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
-            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
+    <div class = "map-container"><div id="vis1"></div></div>
+    <div class = "dualColumn">
+        <div class = "column">
+                <h2>Column 1</h2>
+                <p>This is the content for column 1.</p>
+            </div>
+            <div class = "column">
+                <h2>Column 2</h2>
+                <p>This is the content for column 2.</p>
+            </div>
         </div>
     </div>
     <!-- end pure grid group -->
