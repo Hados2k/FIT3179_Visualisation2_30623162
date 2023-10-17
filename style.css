@@ -1,10 +1,4 @@
-@font-face {
-    font-family: 'Inter';
-    src: url('path/to/inter.woff2') format('woff2');
-    /* Add additional font file formats for compatibility */
-  }
-  
-  body {
+body {
     font-family: 'Inter', sans-serif;
     /* Use 'Inter' as the preferred font with a fallback to a generic sans-serif font. */
   }
