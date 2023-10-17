@@ -28,7 +28,7 @@
     "bind": {"name": "Select the year:", "input": "range", "min": 1990,"max": 2019,"step": 1}
       }
     ],
-  "mark": {"type": "geoshape"},
+  "mark": {"type": "geoshape", "stroke": "transparent"},
   "encoding": {
     "color": {
       "field": "Deaths",
