@@ -3,6 +3,9 @@
   "width": 900,
   "height": 400,
   "projection": {"type": "equalEarth"},
+  "config": {
+    "background": "transparent"
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/data/road-traffic-deaths-sdgs.csv"
     },
@@ -30,7 +33,7 @@
     "color": {
       "field": "Deaths",
       "type": "quantitative",
-      "scale": {"scheme": "yelloworangered", "domain": [100, 1000,10000, 25000, 50000, 100000, 200000,300000]}
+      "scale": {"range": ["#ffc100", "#ff9a00", "#ff4d00", "#ff0000", "#330066"], "domain": [1000, 10000, 25000,100000,400000]}
       },
     "tooltip": [
         {"field": "properties.NAME", "type": "nominal", "title": "Country"},
