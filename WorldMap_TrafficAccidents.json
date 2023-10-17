@@ -1,34 +1,62 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 1000,
-  "height": 600,
-  "projection": {"type": "equalEarth"},
-  "config": {
-    "background": "transparent"
-  },
-  "data": {
-    "url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/data/road-traffic-deaths-sdgs.csv"
-    },
-  "transform": [{
-      "lookup": "Country",
-      "from": {
-        "data": {
-            "url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/main/ne_110m.json",
-            "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
-          },
-        "key": "properties.NAME",
-        "fields": ["properties", "type", "geometry"]
-        }
-      },
-      {"filter": "datum.Year==Year"}
-    ],
+  "height": 400,
   "params": [{
     "name": "Year",
     "value": 2019,
     "bind": {"name": "Select the year:", "input": "range", "min": 1990,"max": 2019,"step": 1}
       }
     ],
-  "mark": {"type": "geoshape", "stroke": "transparent"},
+  "config": {
+    "background": "transparent"
+  },
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/main/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [
+        {
+          "calculate": "'Data is not available in ' + datum.properties.NAME",
+          "as": "note"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ddd",
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {"tooltip": {"field": "note"}}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/WorldMapWithGraticules.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+      },
+      "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+    },
+    {
+      "data": {
+      "url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/data/road-traffic-deaths-sdgs.csv"
+    },
+    "transform": [{
+      "lookup": "Country",
+      "from": {
+        "data": {
+            "url": "https://raw.githubusercontent.com/Hados2k/FIT3179_Visualisation2_30623162/main/main/ne_110m.json",
+            "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+            },
+        "key": "properties.NAME",
+        "fields": ["properties", "type", "geometry"]
+        }
+      },
+      {"filter": "datum.Year==Year"}
+    ],
+    "mark": {"type": "geoshape", "stroke": "transparent"},
   "encoding": {
     "color": {
       "field": "Deaths",
@@ -39,5 +67,11 @@
         {"field": "properties.NAME", "type": "nominal", "title": "Country"},
         {"field": "Deaths", "type": "quantitative", "title" : "Deaths"}
         ]
+        }
     }
+  ],
+  "resolve": {
+    "legend": {"color": "independent"},
+    "scale": {"color": "independent"}
+  }
 }
